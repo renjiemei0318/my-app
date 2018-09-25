@@ -1,0 +1,22 @@
+<style>
+.btns{
+    text-align: center
+}
+.btnspan{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+</style>
+<div class="col-sm-12">
+        <div class="btns">
+        <h4>Find out what do they mean?</h4>        
+        </div>
+<iframe *ngIf="current==1" src="../../barcode/1.html" style="min-height:400px;width:100%"></iframe>
+<iframe *ngIf="current==2" src="../../barcode/2.html" style="min-height:400px;width:100%"></iframe>
+<iframe *ngIf="current==3" src="../../barcode/3.html" style="min-height:400px;width:100%"></iframe>
+<div class="btns">
+    <button type="button" class="btn btn-primary" (click)='Previous()' [disabled]="current==1">Previous</button>
+    <span class="btnspan"> {{current}}/3 </span>
+    <button type="button" class="btn btn-primary" (click)='Next()' [disabled]="current==3">Next</button>
+</div>
+</div>
